@@ -1,5 +1,6 @@
 package mm.com.mytel.redistest.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import mm.com.mytel.redistest.model.TestModel;
 import mm.com.mytel.redistest.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,12 @@ public class TestScenariosController {
     TestService service;
 
     @GetMapping("/putData")
-    public Iterable<TestModel> putData(Jedis jedis){
+    public TestModel putData(Jedis jedis) throws JsonProcessingException {
       return service.testRedisWithTime(jedis);
+    }
+
+    @GetMapping("/putIfNotExist")
+    public TestModel getData(Jedis jedis) throws Exception{
+        return service.putNewIfExists(jedis);
     }
 }

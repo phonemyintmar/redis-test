@@ -37,12 +37,12 @@
             <type>jar</type>
         </dependency>
 
-<!--        Jackson for object to string json-->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.5.3</version>
-        </dependency>
+<!--&lt;!&ndash;        Jackson for object to string json&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
+<!--            <artifactId>jackson-databind</artifactId>-->
+<!--            <version>2.5.3</version>-->
+<!--        </dependency>-->
 
 
 <!--        oracle-->
